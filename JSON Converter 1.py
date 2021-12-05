@@ -9,6 +9,6 @@ data_dict = []
 for i in root[0].findall('item'):
     data_dict.append({'pubDate': i.find("pubDate").text, 'title': i.find('title').text})
 
-with open('news.json', 'wb') as json_file:
+with open('news1.json', 'wb') as json_file:
     file = json.dumps(data_dict, indent=4, ensure_ascii=False).encode('utf8')
     json_file.write(file)
